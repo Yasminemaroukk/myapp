@@ -63,7 +63,10 @@ jobs:
       - name: Checkout deployment code
         uses: actions/checkout@v2
         with:
-          repository: Yasminemaroukk/kustomize-  # Update with your deployment repository URL
+          repository: Yasminemaroukk/kustomize-
+          ref: 'main'
+          token: ${{ secrets.TOKEN }}
+          
           path: deployment  # Update with the path to your deployment configuration
 
       - name: Update Deployment Image
